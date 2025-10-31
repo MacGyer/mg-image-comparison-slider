@@ -24,6 +24,10 @@ To install the package add the following to the ```require``` section of your co
 
 ## Changelog
 
+### 1.0.1 - 2025-10-31
+* [TASK]: cleanup unnecessary CSS rules
+* [TASK]: fix README URLs
+
 ### 1.0.0 - 2025-10-31
 * initial release
 
