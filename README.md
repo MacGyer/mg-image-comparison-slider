@@ -8,7 +8,7 @@
 # Image Comparison Slider
 
 A slider showing the difference between two images. Can be used vertical and horizontal. Based on `img-comparison-slider`
-by [!sneas](https://img-comparison-slider.sneas.io/).
+by [sneas](https://img-comparison-slider.sneas.io/).
 
 ## Installation
 
@@ -32,5 +32,4 @@ To install the package add the following to the ```require``` section of your co
 |                  | URL                                                                |
 |------------------|--------------------------------------------------------------------|
 | **Repository:**  | https://github.com/MacGyer/mg-image-comparison-slider              |
-| **Read online:** | https://docs.typo3.org/p/mg-image-comparison-slider/main/en-us/    |
-| **TER:**         | https://extensions.typo3.org/extension/mg-image-comparison-slider/ |
+| **TER:**         | https://extensions.typo3.org/extension/mg_image_comparison_slider  |
