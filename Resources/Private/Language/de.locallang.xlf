@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" target-language="de" datatype="plaintext" original="EXT:mg_image_comparison_slider/Resources/Private/Language/locallang.xlf" product-name="mg_image_comparison_slider" date="2025-10-26T14:39:55+01:00">
+        <body>
+            <!-- Content Element configuration -->
+            <trans-unit id="ce.imagecomparisonslider.title" resname="ce.imagecomparisonslider.title" approved="yes">
+                <source>Image Comparison Slider</source>
+                <target>Bildvergleich-Slider</target>
+            </trans-unit>
+            <trans-unit id="ce.imagecomparisonslider.description" resname="ce.imagecomparisonslider.description" approved="yes">
+                <source>Slider to display the differences between two images</source>
+                <target>Slider, um die Unterschiede zwischen zwei Bildern darzustellen</target>
+            </trans-unit>
+
+            <!-- Tabs -->
+            <trans-unit id="tab.slider" resname="tab.slider" approved="yes">
+                <source>Slider</source>
+                <target>Slider</target>
+            </trans-unit>
+
+            <!-- Fields -->
+            <trans-unit id="original_image.label" resname="original_image.label" approved="yes">
+                <source>Original image</source>
+                <target>Originalbild</target>
+            </trans-unit>
+            <trans-unit id="comparison_image.label" resname="comparison_image.label" approved="yes">
+                <source>Image to compare</source>
+                <target>Vergleichsbild</target>
+            </trans-unit>
+            <trans-unit id="vertical.label" resname="vertical.label" approved="yes">
+                <source>Vertical comparison direction</source>
+                <target>Vertikale Vergleichsrichtung</target>
+            </trans-unit>
+            <trans-unit id="starting_position.label" resname="starting_position.label" approved="yes">
+                <source>Starting position</source>
+                <target>Startposition</target>
+            </trans-unit>
+            <trans-unit id="starting_position.hint" resname="starting_position.hint" approved="yes">
+                <source>Defines where the comparison starts; percentage value</source>
+                <target>Definiert, wo im Bild der Vergleich beginnt; Prozentwert</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

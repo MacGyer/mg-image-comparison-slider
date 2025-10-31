@@ -1,0 +1,29 @@
+{
+    "name": "macgyer/mg-image-comparison-slider",
+    "title": "Image Comparison Slider",
+    "type": "typo3-cms-extension",
+    "minimum-stability": "stable",
+    "description": "Slider for showing the difference between two images",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "MacGyer",
+            "homepage": "https://github.com/MacGyer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "typo3/cms-core": "^13.4",
+        "typo3/cms-fluid-styled-content": "^13.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "MacGyer\\MgImageComparisonSlider\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "mg_image_comparison_slider"
+        }
+    }
+}

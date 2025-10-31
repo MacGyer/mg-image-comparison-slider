@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="Main">
+    <img-comparison-slider direction="{f:if(condition: '{data.tx_mgimagecomparisonslider_vertical}', then: 'vertical', else: 'horizontal')}" value="{data.tx_mgimagecomparisonslider_starting_position}">
+        <div slot="first">
+            <f:render partial="Media/Rendering/Image" arguments="{file: original_image.0, variants: settings.responsiveimages.variants}" />
+        </div>
+        <div slot="second">
+            <f:render partial="Media/Rendering/Image" arguments="{file: comparison_image.0, variants: settings.responsiveimages.variants}" />
+        </div>
+
+        <div slot="handle" class="sliderHandle">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="m13.51 226.272c-19.254 19.973-16.712 42.756-.058 59.41l131.048 131.045a30.4 30.4 0 0 0 43-43l-117.729-117.727 117.729-117.73a30.4 30.4 0 1 0 -43-43l-130.989 130.997zm310.99-87.999 117.729 117.727-117.729 117.73a30.4 30.4 0 1 0 43 43l130.989-130.997c19.254-19.973 16.712-42.756.058-59.41l-131.047-131.05a30.4 30.4 0 0 0 -43 43z" fill-rule="evenodd"></path></svg>
+        </div>
+    </img-comparison-slider>
+</f:section>
+
+</html>

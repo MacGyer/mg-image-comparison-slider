@@ -1,0 +1,28 @@
+lib.contentElement.templateRootPaths.100 = EXT:mg_image_comparison_slider/Resources/Private/Templates/
+
+tt_content {
+    macgyer_imagecomparisonslider =< lib.contentElement
+    macgyer_imagecomparisonslider {
+        templateName = ImageComparisonSlider
+
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = tx_mgimagecomparisonslider_original_image
+                as = original_image
+            }
+            20 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            20 {
+                references.fieldName = tx_mgimagecomparisonslider_comparison_image
+                as = comparison_image
+            }
+        }
+    }
+}
+
+page.includeJSFooterlibs {
+    mgimgcomparisonslider = EXT:mg_image_comparison_slider/Resources/Public/Vendor/img-comparison-slider/index.js
+    mgimgcomparisonslider.defer = 1
+}
+page.includeCSSLibs.mgimgcomparisonslider = EXT:mg_image_comparison_slider/Resources/Public/Vendor/img-comparison-slider/styles.css
+page.includeCSS.mgimgcomparisonslider_default = EXT:mg_image_comparison_slider/Resources/Public/Css/styles.css
