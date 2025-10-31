@@ -1,8 +1,8 @@
 img-comparison-slider {
     --handleSize: 2.15rem;
-    --handleBgColor: var(--bs-white);
-    --handleColor: var(--bs-primary);
-    --divider-color: var(--bs-white);
+    --handleBgColor: #fff;
+    --handleColor: #333;
+    --divider-color: #fff;
     --divider-width: 3px;
 
     .sliderHandle {
@@ -11,30 +11,13 @@ img-comparison-slider {
         justify-content: center;
         width: var(--handleSize);
         height: var(--handleSize);
-        border-radius: var(--bs-border-radius-pill);
+        border-radius: 100%;
         background-color: var(--handleBgColor);
-        box-shadow: var(--bs-box-shadow);
-        cursor: grab;
 
         svg {
             width: 70%;
             height: 70%;
             fill: var(--handleColor);
         }
-    }
-
-    .page-2 & {
-        --handleBgColor: var(--bs-secondary);
-        --handleColor: var(--bs-white);
-    }
-
-    .page-3 & {
-        --handleBgColor: var(--bs-tertiary);
-        --handleColor: var(--bs-black);
-    }
-
-    .page-4 & {
-        --handleBgColor: var(--bs-quaternary);
-        --handleColor: var(--bs-white);
     }
 }
