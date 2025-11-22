@@ -16,6 +16,7 @@ tt_content {
                 references.fieldName = tx_mgimagecomparisonslider_comparison_image
                 as = comparison_image
             }
+            30 = MacGyer\MgImageComparisonSlider\DataProcessing\ConstantsProcessor
         }
     }
 }

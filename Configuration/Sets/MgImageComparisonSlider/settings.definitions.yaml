@@ -1,0 +1,32 @@
+categories:
+    ImageComparisonSlider:
+        label: 'Image Comparison Slider'
+    ImageComparisonSliderHandle:
+        label: 'Handle'
+        parent: ImageComparisonSlider
+    ImageComparisonSliderDivider:
+        label: 'Divider'
+        parent: ImageComparisonSlider
+
+settings:
+    mg_image_comparison_slider.handle.bgColor:
+        label: Background color
+        type: string
+        category: ImageComparisonSliderHandle
+        default: '#fff'
+    mg_image_comparison_slider.handle.color:
+        label: Color
+        type: string
+        category: ImageComparisonSliderHandle
+        default: '#333'
+    mg_image_comparison_slider.divider.color:
+        label: Color
+        type: string
+        category: ImageComparisonSliderDivider
+        default: '#fff'
+    mg_image_comparison_slider.divider.width:
+        label: Width
+        description: in pixels
+        type: int
+        category: ImageComparisonSliderDivider
+        default: 3

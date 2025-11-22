@@ -15,6 +15,14 @@
                 <source>Slider</source>
             </trans-unit>
 
+            <!-- Palettes -->
+            <trans-unit id="palette.handle" resname="palette.handle">
+                <source>Handle</source>
+            </trans-unit>
+            <trans-unit id="palette.divider" resname="palette.divider">
+                <source>Divider</source>
+            </trans-unit>
+
             <!-- Fields -->
             <trans-unit id="original_image.label" resname="original_image.label">
                 <source>Original image</source>
@@ -30,6 +38,21 @@
             </trans-unit>
             <trans-unit id="starting_position.hint" resname="starting_position.hint">
                 <source>Defines where the comparison starts; percentage value</source>
+            </trans-unit>
+            <trans-unit id="handle_bgcolor.label" resname="handle_bgcolor.label">
+                <source>Background color</source>
+            </trans-unit>
+            <trans-unit id="handle_color.label" resname="handle_color.label">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="divider_color.label" resname="divider_color.label">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="divider_width.label" resname="divider_width.label">
+                <source>Width</source>
+            </trans-unit>
+            <trans-unit id="divider_width.hint" resname="divider_width.hint">
+                <source>in pixels</source>
             </trans-unit>
         </body>
     </file>
