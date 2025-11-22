@@ -3,12 +3,27 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
+
+    <f:variable name="handleBgColor">{f:if(condition: '{data.tx_mgimagecomparisonslider_handle_bgcolor}', then: '{data.tx_mgimagecomparisonslider_handle_bgcolor}', else: '{default_settings.handle.bgColor}')}</f:variable>
+    <f:variable name="handleColor">{f:if(condition: '{data.tx_mgimagecomparisonslider_handle_color}', then: '{data.tx_mgimagecomparisonslider_handle_color}', else: '{default_settings.handle.color}')}</f:variable>
+    <f:variable name="dividerColor">{f:if(condition: '{data.tx_mgimagecomparisonslider_divider_color}', then: '{data.tx_mgimagecomparisonslider_divider_color}', else: '{default_settings.divider.color}')}</f:variable>
+    <f:variable name="dividerWidth">{f:if(condition: '{data.tx_mgimagecomparisonslider_divider_width}', then: '{data.tx_mgimagecomparisonslider_divider_width}', else: '{default_settings.divider.width}')}</f:variable>
+
+    <f:asset.css identifier="mg-image-comparison-slider-custom-styles">
+        img-comparison-slider {
+            --handleBgColor: {handleBgColor};
+            --handleColor: {handleColor};
+            --divider-color: {dividerColor};
+            --divider-width: {dividerWidth}px
+        }
+    </f:asset.css>
+
     <img-comparison-slider direction="{f:if(condition: '{data.tx_mgimagecomparisonslider_vertical}', then: 'vertical', else: 'horizontal')}" value="{data.tx_mgimagecomparisonslider_starting_position}">
         <div slot="first">
-            <f:render partial="Media/Rendering/Image" arguments="{file: original_image.0, variants: settings.responsiveimages.variants}" />
+            <f:image image="{original_image.0}" />
         </div>
         <div slot="second">
-            <f:render partial="Media/Rendering/Image" arguments="{file: comparison_image.0, variants: settings.responsiveimages.variants}" />
+            <f:image image="{comparison_image.0}" />
         </div>
 
         <div slot="handle" class="sliderHandle">

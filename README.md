@@ -22,7 +22,13 @@ To install the package add the following to the ```require``` section of your co
 }
 ```
 
+Include the Site set, either in your page config or as dependency of another set.
+
 ## Changelog
+
+### 1.1.0 - 2025-11-22
+* [FIX]: render images with `<f:image>` instead of partial
+* [NEW]: add settings for handle and divider
 
 ### 1.0.1 - 2025-10-31
 * [TASK]: cleanup unnecessary CSS rules

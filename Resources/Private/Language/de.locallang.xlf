@@ -18,6 +18,16 @@
                 <target>Slider</target>
             </trans-unit>
 
+            <!-- Palettes -->
+            <trans-unit id="palette.handle" resname="palette.handle">
+                <source>Handle</source>
+                <target>Anfasser</target>
+            </trans-unit>
+            <trans-unit id="palette.divider" resname="palette.divider">
+                <source>Divider</source>
+                <target>Trenner</target>
+            </trans-unit>
+
             <!-- Fields -->
             <trans-unit id="original_image.label" resname="original_image.label" approved="yes">
                 <source>Original image</source>
@@ -38,6 +48,26 @@
             <trans-unit id="starting_position.hint" resname="starting_position.hint" approved="yes">
                 <source>Defines where the comparison starts; percentage value</source>
                 <target>Definiert, wo im Bild der Vergleich beginnt; Prozentwert</target>
+            </trans-unit>
+            <trans-unit id="handle_bgcolor.label" resname="handle_bgcolor.label">
+                <source>Background color</source>
+                <target>Hintergrundfarbe</target>
+            </trans-unit>
+            <trans-unit id="handle_color.label" resname="handle_color.label">
+                <source>Color</source>
+                <target>Farbe</target>
+            </trans-unit>
+            <trans-unit id="divider_color.label" resname="divider_color.label">
+                <source>Color</source>
+                <target>Farbe</target>
+            </trans-unit>
+            <trans-unit id="divider_width.label" resname="divider_width.label">
+                <source>Width</source>
+                <target>Breite</target>
+            </trans-unit>
+            <trans-unit id="divider_width.hint" resname="divider_width.hint">
+                <source>in pixels</source>
+                <target>in Pixeln</target>
             </trans-unit>
         </body>
     </file>

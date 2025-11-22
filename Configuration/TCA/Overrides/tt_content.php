@@ -76,6 +76,48 @@ defined('TYPO3') || die('Access denied.');
                 'default' => 50,
             ],
         ],
+        "{$imageComparisonSliderShortKey}_handle_bgcolor" => [
+            'label' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:handle_bgcolor.label",
+            'exclude' => true,
+            'config' => [
+                'type' => 'color',
+                'default' => null,
+                'nullable' => true,
+            ],
+        ],
+        "{$imageComparisonSliderShortKey}_handle_color" => [
+            'label' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:handle_color.label",
+            'exclude' => true,
+            'config' => [
+                'type' => 'color',
+                'default' => null,
+                'nullable' => true,
+            ],
+        ],
+        "{$imageComparisonSliderShortKey}_divider_color" => [
+            'label' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:divider_color.label",
+            'exclude' => true,
+            'config' => [
+                'type' => 'color',
+                'default' => null,
+                'nullable' => true,
+            ],
+        ],
+        "{$imageComparisonSliderShortKey}_divider_width" => [
+            'label' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:divider_width.label",
+            'description' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:divider_width.hint",
+            'exclude' => true,
+            'config' => [
+                'type' => 'number',
+                'format' => 'integer',
+                'range' => [
+                    'lower' => 0,
+                    'upper' => 100,
+                ],
+                'default' => null,
+                'nullable' => true,
+            ],
+        ],
     ];
 
     ExtensionManagementUtility::addTCAcolumns(
@@ -83,7 +125,28 @@ defined('TYPO3') || die('Access denied.');
         $comparisonSliderColumns,
     );
 
-    $comparisonSliderFieldString = "--palette--;;header,--div--;LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:tab.slider,{$imageComparisonSliderShortKey}_original_image,{$imageComparisonSliderShortKey}_comparison_image,{$imageComparisonSliderShortKey}_vertical,{$imageComparisonSliderShortKey}_starting_position";
+    $GLOBALS['TCA']['tt_content']['palettes']["{$imageComparisonSliderShortKey}_handle"] = [
+        'label' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:palette.handle",
+        'showitem' => '',
+    ];
+    $GLOBALS['TCA']['tt_content']['palettes']["{$imageComparisonSliderShortKey}_divider"] = [
+        'label' => "LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:palette.divider",
+        'showitem' => '',
+    ];
+
+    ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        "{$imageComparisonSliderShortKey}_handle",
+        "{$imageComparisonSliderShortKey}_handle_bgcolor,{$imageComparisonSliderShortKey}_handle_color",
+    );
+
+    ExtensionManagementUtility::addFieldsToPalette(
+        'tt_content',
+        "{$imageComparisonSliderShortKey}_divider",
+        "{$imageComparisonSliderShortKey}_divider_color,{$imageComparisonSliderShortKey}_divider_width",
+    );
+
+    $comparisonSliderFieldString = "--palette--;;header,--div--;LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:tab.slider,{$imageComparisonSliderShortKey}_original_image,{$imageComparisonSliderShortKey}_comparison_image,{$imageComparisonSliderShortKey}_vertical,{$imageComparisonSliderShortKey}_starting_position,--palette--;;{$imageComparisonSliderShortKey}_handle,--palette--;;{$imageComparisonSliderShortKey}_divider";
 
     ExtensionManagementUtility::addToAllTCAtypes(
         'tt_content',
