@@ -26,6 +26,9 @@ Include the Site set, either in your page config or as dependency of another set
 
 ## Changelog
 
+### 1.1.1 - 2026-02-01
+* [NEW]: update JS library to [8.0.7](https://www.npmjs.com/package/img-comparison-slider/v/8.0.7) which uses Constructable Stylesheets for Shadow DOM to avoid issues with nonce attribe when CSP is enabled
+
 ### 1.1.0 - 2025-11-22
 * [FIX]: render images with `<f:image>` instead of partial
 * [NEW]: add settings for handle and divider
