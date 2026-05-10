@@ -5,6 +5,11 @@ img-comparison-slider {
     --divider-color: #fff;
     --divider-width: 3px;
 
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+
     .sliderHandle {
         display: flex;
         align-items: center;
@@ -20,4 +25,16 @@ img-comparison-slider {
             fill: var(--handleColor);
         }
     }
+}
+
+img-comparison-slider [slot="first"],
+img-comparison-slider [slot="second"] {
+    display: block;
+}
+
+img-comparison-slider img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
 }
