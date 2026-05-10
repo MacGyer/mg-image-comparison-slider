@@ -12,9 +12,16 @@ defined('TYPO3') || die('Access denied.');
     $imageComparisonSliderElementKey = mb_strtolower($vendor) . '_imagecomparisonslider';
     $imageComparisonSliderShortKey = 'tx_' . str_replace('_', '', $extKey);
 
+    $comparisonSliderFieldString = "--div--;LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:tab.slider,{$imageComparisonSliderShortKey}_original_image,{$imageComparisonSliderShortKey}_comparison_image,{$imageComparisonSliderShortKey}_vertical,{$imageComparisonSliderShortKey}_starting_position,--palette--;;{$imageComparisonSliderShortKey}_handle,--palette--;;{$imageComparisonSliderShortKey}_divider";
+
     if (!is_array($GLOBALS['TCA']['tt_content']['types'][$imageComparisonSliderElementKey] ?? false)) {
+        // Insert the Slider tab as the second tab, directly after the General tab
+        $baseShowItem = $GLOBALS['TCA']['tt_content']['types']['header']['showitem'];
+        $firstDivPos = strpos($baseShowItem, '--div--');
+        $showItem = $firstDivPos !== false ? substr($baseShowItem, 0, $firstDivPos) . $comparisonSliderFieldString . ',' . substr($baseShowItem, $firstDivPos) : $baseShowItem . ',' . $comparisonSliderFieldString;
+
         $GLOBALS['TCA']['tt_content']['types'][$imageComparisonSliderElementKey] = [
-            'showitem' => $GLOBALS['TCA']['tt_content']['types'][1]['showitem']
+            'showitem' => $showItem,
         ];
     }
 
@@ -144,14 +151,5 @@ defined('TYPO3') || die('Access denied.');
         'tt_content',
         "{$imageComparisonSliderShortKey}_divider",
         "{$imageComparisonSliderShortKey}_divider_color,{$imageComparisonSliderShortKey}_divider_width",
-    );
-
-    $comparisonSliderFieldString = "--palette--;;header,--div--;LLL:EXT:$extKey/Resources/Private/Language/locallang.xlf:tab.slider,{$imageComparisonSliderShortKey}_original_image,{$imageComparisonSliderShortKey}_comparison_image,{$imageComparisonSliderShortKey}_vertical,{$imageComparisonSliderShortKey}_starting_position,--palette--;;{$imageComparisonSliderShortKey}_handle,--palette--;;{$imageComparisonSliderShortKey}_divider";
-
-    ExtensionManagementUtility::addToAllTCAtypes(
-        'tt_content',
-        $comparisonSliderFieldString,
-        $imageComparisonSliderElementKey,
-        'before:sys_language_uid'
     );
 })();

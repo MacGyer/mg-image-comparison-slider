@@ -9,8 +9,8 @@
     <f:variable name="dividerColor">{f:if(condition: '{data.tx_mgimagecomparisonslider_divider_color}', then: '{data.tx_mgimagecomparisonslider_divider_color}', else: '{default_settings.divider.color}')}</f:variable>
     <f:variable name="dividerWidth">{f:if(condition: '{data.tx_mgimagecomparisonslider_divider_width}', then: '{data.tx_mgimagecomparisonslider_divider_width}', else: '{default_settings.divider.width}')}</f:variable>
 
-    <f:asset.css identifier="mg-image-comparison-slider-custom-styles">
-        img-comparison-slider {
+    <f:asset.css identifier="mg-image-comparison-slider-custom-styles-{data.uid}">
+        #mg-ics-{data.uid} {
             --handleBgColor: {handleBgColor};
             --handleColor: {handleColor};
             --divider-color: {dividerColor};
@@ -18,7 +18,7 @@
         }
     </f:asset.css>
 
-    <img-comparison-slider direction="{f:if(condition: '{data.tx_mgimagecomparisonslider_vertical}', then: 'vertical', else: 'horizontal')}" value="{data.tx_mgimagecomparisonslider_starting_position}">
+    <img-comparison-slider id="mg-ics-{data.uid}" direction="{f:if(condition: '{data.tx_mgimagecomparisonslider_vertical}', then: 'vertical', else: 'horizontal')}" value="{data.tx_mgimagecomparisonslider_starting_position}">
         <div slot="first">
             <f:image image="{original_image.0}" />
         </div>
